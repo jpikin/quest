@@ -1,9 +1,12 @@
 package org.example.quest.user;
 
+import org.example.quest.game.Game;
+
 public abstract class Player {
     private static int gameCounter = 0;
-    String name;
-    Race race;
+    private String name;
+    private Race race;
+    private Game game;
 
 
     public Player(String name) {
@@ -15,4 +18,6 @@ public abstract class Player {
     public void incrementGameCounter() {gameCounter++;}
     public String getName(){return name;}
     public void setName(String name){this.name = name;}
+    public Game getGame() {return game;}
+    public String say(){return "";}
 }

@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Space station</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="wrapper">
@@ -18,9 +18,11 @@
 </div>
 <div class="startGameMenu">
     <h3><%= "Для начала игры вам нужно выбрать расу персонажа и его имя"%></h3>
+    <div class="radio-container">
     <input type="radio" id="human" name="race" value="human"><label for="human">Human</label><br />
     <input type="radio" id="protos" name="race" value="protos" disabled><label for="protos">Protos</label><br />
     <input type="radio" id="zerg" name="race" value="zerg" disabled><label for="zerg">Zerg</label><br />
+    </div>
     <input placeholder="Имя"><button class="nameButton" type="submit">Ввести имя</button><br />
     <button onclick="window.location.href='start-game'">Старт игры</button>
 </div>
