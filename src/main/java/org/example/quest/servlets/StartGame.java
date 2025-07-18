@@ -1,16 +1,19 @@
-package org.example.quest;
+package org.example.quest.servlets;
 
 import java.io.*;
 
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import org.example.quest.user.Human;
+import org.example.quest.user.Player;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "startGame", value = "/start-game")
+public class StartGame extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        Player human = new Human("TestName");
+        message = human.getName();
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -19,7 +22,8 @@ public class HelloServlet extends HttpServlet {
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1>Space station</h1>");
+        out.println("<h2>" + message + "</h2>");
         out.println("</body></html>");
     }
 

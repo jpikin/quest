@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at top left, black, darkblue),
+    repeating-radial-gradient(white 0.1px, transparent 0.1px),
+    repeating-linear-gradient(to right, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 2px);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #1c3865;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 2px;
+    border: none;
+}
+
+.nameButton {
+    margin-left: 5px;
+}
+
+.startDivSize, .startGameMenu {
+    opacity: 0;
+    /*transform: translateY(-20px);*/
+    transition: all 0.5s ease-in-out;
+    width: 950px;
+    text-align: center;
+}
+
+.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wrapper {
+    width: 1000px;
+    text-align: center;
+    padding: 20px;
+    background-color: #bbb7b7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
