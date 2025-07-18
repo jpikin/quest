@@ -23,14 +23,17 @@
     <input type="radio" id="protos" name="race" value="protos" disabled><label for="protos">Protos</label><br />
     <input type="radio" id="zerg" name="race" value="zerg" disabled><label for="zerg">Zerg</label><br />
     </div>
-    <input placeholder="Имя"><button class="nameButton" type="submit">Ввести имя</button><br />
+    <label>
+        <input placeholder="Имя">
+    </label>
+    <button class="nameButton" type="submit">Ввести имя</button><br />
     <button onclick="window.location.href='start-game'">Старт игры</button>
 </div>
 </div>
 <script>
     window.onload = function() {
-        var startDivSize = document.querySelector('.startDivSize');
-        var startGameMenu = document.querySelector('.startGameMenu');
+        let startDivSize = document.querySelector('.startDivSize');
+        let startGameMenu = document.querySelector('.startGameMenu');
 
         setTimeout(function() {
             startDivSize.classList.add('fadeInUp');
