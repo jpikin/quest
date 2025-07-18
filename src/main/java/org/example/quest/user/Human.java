@@ -5,16 +5,14 @@ import org.example.quest.game.HumanWay;
 
 public class Human extends Player{
     Game game;
+    Race race;
+
     public Human(String name) {
         super(name);
-        Race race = Race.HUMAN;
+        race = Race.HUMAN;
         game = new HumanWay();
     }
 
-    @Override
-    public String say() {
-        return "i'm a Human, my name is " + this.getName();
-    }
     @Override
     public Game getGame() {return game;}
 
