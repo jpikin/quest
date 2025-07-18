@@ -15,7 +15,8 @@ public class StartGame extends HttpServlet {
     public void init() {
         Player player = new Human("TestName");
         Game game = player.getGame();
-        message = player.say();
+        message = game.startGame();
+
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
